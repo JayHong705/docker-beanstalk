@@ -1,4 +1,7 @@
-# docker-beanstalk
+# docker-beanstalk (WIP)
+
+## 설명
+- 업데이트 예정
 
 ## 실천 계획
 - 평일의 경우, 7시 기상 후 7시 30분 ~ 9시 30분 사이에 작성한 코드를 commit!
