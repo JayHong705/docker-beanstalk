@@ -1,15 +1,12 @@
-FROM python:38
+FROM python:3
+MAINTAINER gigyeong@gmail.com
+
+ENV PYTHONUNBUFFERED=1
 
 WORKDIR /code
 
-ADD . /code/
-
-ADD requirements.txt /code/
+COPY requirements.txt /code/
 
 RUN pip install -r requirements.txt
 
-WORKDIR /code
-
-EXPOSE 80 22
-
-CMD ["supervisord", "-n"]
+COPY . /code/
