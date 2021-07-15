@@ -15,11 +15,13 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'email'
 
+
 class Profile(models.Model):
     """
     유저 프로필
     """
     class Status(models.TextChoices):
+        NOT_SIGNUP = 'NOT_SIGNUP', _('비회원')
         ON_SIGNUP = 'ON_SIGNUP', _('가입 중')
         PROFILE_CREATED = 'PROFILE_CREATED', _('프로필 생성 완료')
         IDENTITY_AUTHENTICATED = 'IDENTITY_AUTHENTICATED', _('본인인증 완료')
