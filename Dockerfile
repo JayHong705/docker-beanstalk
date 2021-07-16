@@ -1,12 +1,12 @@
-FROM python:3
+FROM python:3.8.11-alpine3.14
 MAINTAINER gigyeong@gmail.com
 
 ENV PYTHONUNBUFFERED=1
 
 WORKDIR /code
-
 COPY requirements.txt /code/
-
+COPY . /code/
 RUN pip install -r requirements.txt
 
-COPY . /code/
+EXPOSE 8000
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
