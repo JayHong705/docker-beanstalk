@@ -24,7 +24,8 @@ DEFAULT_APPS = [
 ]
 
 COMMON_APPS = [
-    'rest_framework'
+    'rest_framework',
+    'rest_framework_simplejwt'
 ]
 
 PROJECT_APPS = [
